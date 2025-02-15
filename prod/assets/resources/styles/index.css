@@ -1,0 +1,48 @@
+* {
+    font-family: sans-serif;
+}
+ 
+/* Barra de navegação */
+
+.img-logo {
+    margin-left: -15px;
+    
+}
+
+.nome-logo {
+    margin-left: -11px;
+}
+
+.bnt {
+    border-radius: 80px;
+}
+
+/* Fim da Barra de navegação */
+
+/* Validação */
+
+input:invalid:not(:placeholder-shown){
+    border-color: #c72815;
+    ;
+}
+
+input:valid {
+    border-color: green;
+}
+
+.error-text {
+    display: none;
+    font-size: 14px;
+    margin-bottom: -7px;
+    color: #c72815;
+}
+
+input:invalid:not(:placeholder-shown) ~ .error-text {
+    display: block;
+}
+
+input:valid ~ .error-text {
+    display: none;
+}
+
+

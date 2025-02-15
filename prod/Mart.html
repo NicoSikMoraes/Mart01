@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="pt-br">
+
+  <head>
+
+    <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+           <title>Mart</title>
+
+
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+           <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+           <link rel="stylesheet" href="/Mart/prod/assets/resources/styles/index.css">
+           <link rel="stylesheet" href="/Mart/prod/assets/resources/styles/mart.css">
+           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      
+  </head>
+
+  <body>
+      
+ <!-- Barra de Navegação -->
+          <div id="barra-navegacao">
+
+            <nav class="navbar fixed-top navbar-expand navbar-dark bg-danger"> 
+      
+              <!-- Logo -->
+               <a href="Mart.html"> <img class="img-logo ms-1" src="imagens/mtestbackground.png"> </a>
+            <a href="Mart.html" class="nome-logo navbar-brand">Mart</a> 
+        
+           
+        
+        
+            <!-- Navegação -->
+               <div class="collapse navbar-collapse" id="nav-target3"> <!-- Só com o "collapse" ja faz a lista desaparecer e aparecer o hamburguerzinho no lugar. "navbar-collapse" formata o collapse pra ficar bonitihno. -->
+                    <ul class="navbar-nav ms-auto me-2"> 
+                      <li class="nav-item">
+                          <a href="explore.html" class="nav-link me-1" >Explorar</a>
+                      </li>
+        
+                      <li class="nav-item">
+                          <!-- Button trigger modal -->
+                                <button type="button" class="bnt-entrar btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#modalEntrar">
+                                  Entrar
+                                </button>
+                      </li>
+        
+                      <li class="nav-item">
+                           <!-- Button trigger modal -->
+                           <button type="button" class="bnt-entrar btn btn-outline-light text-truncate me-2" data-bs-toggle="modal" data-bs-target="#modalRegistro">
+                            Registrar
+                          </button>
+                      </li>
+
+                      <li class="nav-item" style="display: inline-block;">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="bnt-entrar btn btn-outline-light text-truncate me-2" data-bs-toggle="modal" data-bs-target="#modalConta" id="clickme">
+                         Contas
+                       </button>
+                   </li>
+                    </ul>
+        
+                       
+               </div>
+
+         
+        </nav>
+          </div>
+    <!-- Fim da Barra de Navegação -->
+   
+
+<!-- Modal - Entrar -->
+<div class="modal fade" id="modalEntrar" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+            <img class="" src="imagens/Logom4.png" style="margin-left: 43%;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+            <h3 class="fw-semibold text-center p-3" style="color: #333333;"> Faça o login para ver mais </h3>
+
+              <!-- FORM -->
+                <form id="join-form">
+                      <div class="form-floating mb-3 d-grid col-10 mx-auto">
+                            <input pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})$"
+                             type="email" class="form-control" style="border-radius: 14px;" id="emailInput" placeholder="nome@exemplo.com" required>
+                            
+                             <label for="emailInput"> Email </label>
+                            <p class="error-text ms-3 mt-1"> Email inválido </p>
+                               </div>
+
+                      <div class="form-floating mb-3 d-grid col-10 mx-auto">
+                        <input pattern="^[A-Za-z\d]{7,}$" type="password" class="form-control" style="border-radius: 14px;" id="senhalInput" placeholder="Senha" required>
+                        <label for="senhaInput"> Senha </label> 
+                        <p class="error-text ms-3 mt-1"> Senha inválida </p>
+                  </div>
+
+                  <!--Remember-me -->
+                  <div>
+                    <div class="form-check ms-5">
+                      <input class="form-check-input" type="checkbox" id="checkBox">
+                      <label class="form-check-label fw-medium" for="checkBox">
+                        lembre-me
+                      </label>
+                    </div>
+                  </div>
+                   <!-- Fim do Remember-me -->
+                        
+                        <div class="d-grid col-10 mx-auto mt-3 mb-2">
+                          <button type="submit" class="btn btn-dark btn-lg" style="border-radius: 40px;">Entrar</button>
+                        </div>
+
+                </form>
+
+      </div>
+
+      <div class="modal-footer">
+        <p class="fst-italic mx-auto" style="font-size: 14px;">Ao continuar, você concorda com os Termos de Serviço do Mart </p>
+        <p class="fst-italic mx-auto" style="font-size: 14px;">e confirma que leu nossa Política de Privacidade</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fim do Modal - Entrar -->
+
+<!-- Modal - Registro -->
+<div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+            <img class="" src="imagens/Logom4.png" style="margin-left: 43%;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+            <h3 class="fw-semibold text-center p-3" style="color: #333333;"> Bem vindo ao Mart </h3>
+
+              <!-- FORM -->
+                <form id="login-form">
+
+                        <div class="form-floating mb-3 d-grid col-10 mx-auto">
+                          <input pattern="^[A-Za-z\d]{4,}$" type="text" class="form-control" style="border-radius: 14px;" id="nomeInput2" placeholder="Nome" required>
+                          <label for="nomeInput2"> Nome </label>
+                          <p class="error-text ms-3 mt-1"> Nome inválido </p>
+                            </div>
+
+
+                      <div class="form-floating mb-3 d-grid col-10 mx-auto">
+                            <input  pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})$" 
+                                 type="email" class="form-control" style="border-radius: 14px;" id="emailInput2" placeholder="nome@exemplo.com" required>
+                            
+                                 <label for="emailInput2"> Email </label>
+                            <p class="error-text ms-3 mt-1"> Email inválido </p>
+                               </div>
+
+                      <div class="form-floating mb-3 d-grid col-10 mx-auto">
+                        <input pattern="^[A-Za-z\d]{7,}$" type="password" class="form-control" style="border-radius: 14px;" id="senhalInput2" placeholder="Senha" required>
+                        <label for="senhaInput2"> Senha </label> 
+                        <p class="error-text ms-3 mt-1"> Senha inválida </p>
+                  </div>
+
+                  <div pattern="^[0-9]{8,}$" class="form-floating mb-3 d-grid col-10 mx-auto">
+                    <input type="text" class="form-control" style="border-radius: 14px;" id="dataInput2" placeholder="Data de nascimento" autocomplete="off" required>
+                    <label for="dataInput2"> Data de Nascimento </label> 
+                    <p class="error-text ms-3 mt-1"> data inválida </p>
+              </div>
+
+                  <!--Remember-me -->
+                  <div>
+                    <div class="form-check ms-5">
+                      <input class="form-check-input" type="checkbox" id="checkBox2">
+                      <label class="form-check-label fw-medium" for="checkBox2">
+                        lembre-me
+                      </label>
+                    </div>
+                  </div>
+                   <!-- Fim do Remember-me -->
+                        
+                        <div class="d-grid col-10 mx-auto mt-3 mb-2">
+                          <button type="submit" class="btn btn-dark btn-lg" style="border-radius: 40px;">Entrar</button>
+                        </div>
+
+                </form>
+
+      </div>
+
+      <div class="modal-footer">
+        <p class="fst-italic mx-auto" style="font-size: 14px;">Ao continuar, você concorda com os Termos de Serviço do Mart </p>
+        <p class="fst-italic mx-auto" style="font-size: 14px;">e confirma que leu nossa Política de Privacidade</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fim do Modal - Registro -->
+
+<!-- Modal - Contas -->
+<div class="modal fade" id="modalConta" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+            <img class="" src="imagens/Logom4.png" style="margin-left: 43%;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+            <h3 class="fw-semibold text-center p-3" style="color: #333333;"> Contas cadastradas </h3>
+
+           <!-- Tabela -->
+<div id="table-container" style="display: none; font-size: 24px;" class="col-4">
+          
+              <table class="responsive-table" id="table-login">
+                  <tbody id="table-login-body">
+                      <tr>
+                          <td>name</td>
+                          <td>Email</td>
+                      </tr>
+                  </tbody>
+              </table>
+
+</div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<!-- Fim do Modal - Contas -->
+
+<!-- Carousel -->
+<div class="container-fluid" style="height: 100vh;">
+                
+            <div id="carousel-controles" class="carousel slide" data-bs-ride="true">
+
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-controles" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel-controles" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel-controles" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+                      <div class="carousel-inner">
+                            <div class="carousel-item active"> <!-- Item 1 -->
+                              
+                        <div class="row" style="height: 100vh;">
+
+
+                          <div class="col-2 align-self-end mb-3">
+                              <img src="imagens/look de verao 1.jpg" class="card-img1">
+                          </div>
+                      
+                          <div class="col-1 align-self-end mb-3">
+                            <img src="imagens/look2.jpg" class="card-img2">
+                        </div>
+                      
+                      
+                          <div class="col-md-6 col-12 my-auto" style="height: 150px;">
+                            <h1 class="text-center fw-bold h1p" style="margin: 0px;">Encontre sua próxima</h1><br>
+                            <h1 class="text-center fw-bold h1m" style="color: #839deb; margin-top: -25px;"> ideia de look de verão</h1>
+                      </div>
+
+                      <div class="col-md-1 col-0 align-self-end mb-3">
+                        <img src="imagens/look3.4.jpg" class="card-img3">
+                      </div>
+                                
+                      <div class="col-md-1 col-0 align-self-end mb-3">
+                        <img src="imagens/look5.png" class="card-img5">
+                      </div>
+                      
+                      <div class="col-md-1 col-0 align-self-end mb-3">
+                      <img src="imagens/look6.jpg" class="card-img6">
+                      </div>
+                        
+                      
+                              </div> <!-- Fim do row, Item 1 -->
+
+                          </div> <!-- Fim do item 1-->
+
+                      
+                          <!-- Começo item 2 -->
+                          <div class="carousel-item"> <!-- Item 2 -->
+                              
+                            <div class="row" style="height: 100vh;">
+    
+    
+                              <div class="col-2 align-self-end mb-3">
+                                  <img src="imagens/kids1.jpg" class="card2-img1">
+                              </div>
+                          
+                              <div class="col-1 align-self-end mb-3">
+                                <img src="imagens/kids2.jpg" class="card2-img2">
+                            </div>
+                          
+                          
+                              <div class="col-md-6 col-12 my-auto" style="height: 150px;">
+                                <h1 class="text-center fw-bold" style="margin: 0px;">Encontre sua próxima</h1>
+                                <h1 class="text-center fw-bold" style="color: #67975a; margin: 0px;"> atividade para crianças </h1>                                                
+                              </div>
+
+                          <div class="col-md-1 col-0 align-self-end mb-3">
+                            <img src="imagens/kids3.jpg" class="card2-img3">
+                          </div>
+                                    
+                          <div class="col-md-1 col-0 align-self-end mb-3">
+                            <img src="imagens/kids4.jpg" class="card2-img4">
+                          </div>
+                          
+                          <div class="col-md-1 col-0 align-self-end mb-3">
+                          <img src="imagens/kids6.jpg" class="card2-img5">
+                          </div>
+                          
+                          
+                         
+                          
+                                  </div> <!-- Fim do row, Item 2 -->
+    
+                              </div> <!-- Fim do item 2-->
+
+                              <!-- Começo item 3 -->
+                          <div class="carousel-item"> <!-- Item 3 -->
+                              
+                            <div class="row" style="height: 100vh">
+    
+    
+                              <div class="col-2 align-self-end mb-3">
+                                  <img src="imagens/janta1.jpg" class="card3-img1">
+                              </div>
+                          
+                              <div class="col-1 align-self-end mb-3">
+                                <img src="imagens/janta2.jpg" class="card3-img2">
+                            </div>
+                          
+                          
+                              <div class="col-md-6 col-12 my-auto" style="height: 150px;">
+                                <h1 class="text-center fw-bold" style="  margin: 0px;">Encontre sua próxima</h1>
+                                <h1 class="text-center fw-bold" style="color: #c4a620; margin: 0px;"> ideia para um jantar especial </h1>                       
+                              </div>
+                               
+                          <div class="col-md-1 col-0 align-self-end mb-3">
+                              <img src="imagens/janta3.jpg" class="card3-img3">
+                          </div>     
+
+                          <div class="col-md-1 col-0 align-self-end mb-3">
+                            <img src="imagens/janta4.jpg" class="card3-img4">
+                          </div>
+                          
+                          <div class="col-md-1 col-0 align-self-end mb-3">
+                          <img src="imagens/janta5.jpg" class="card3-img5">
+                          </div>
+                          
+                          
+                         
+                          
+                                  </div> <!-- Fim do row, Item 3 -->
+    
+                              </div> <!-- Fim do item 3 -->
+                      
+                      </div> <!-- Fim do inner -->
+
+                        <!-- Controles -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-controles" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-controles" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+
+            </div> <!-- Fim do carousel -->
+
+</div> <!-- Fim do container -->
+
+
+ <!-- Animação modal contas usando jquery -->
+ <script>
+  $( "#clickme" ).on( "click", function() {
+$( "#modalConta" ).slideDown( "slow", function() {
+ // Animation complete.
+});
+});
+ </script>
+  <!-- Fim da animação modal contas usando jquery -->
+
+ <!-- Jquery Mask para Data de nascimento -->
+ <script>
+  $(document).ready(function(){
+     $('#dataInput2').mask('00/00/0000');
+  });
+</script>
+
+    <script src="/Mart/prod/assets/libraries/jquery-3.3.1.min.js"></script>
+    <script src="/Mart/prod/assets/libraries/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/Mart/prod/assets/resources/scripts/storage.js" defer></script>
+    <script type="module" src="/Mart/prod/control.js"></script>     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </body>
+
+</html>

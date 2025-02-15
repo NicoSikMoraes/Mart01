@@ -1,0 +1,70 @@
+{
+  "user": [
+    {
+      "id": "9926",
+      "name": "Nico",
+      "email": "nicolas.moraes.ns@gmail.com",
+      "password": null
+    },
+    {
+      "id": "a5d5",
+      "name": "Lara",
+      "email": "nicolas.moraes.ns@gmail.com",
+      "password": null
+    },
+    {
+      "id": "fe21",
+      "name": "Natalia",
+      "email": "natalia@gmail.com",
+      "password": null
+    },
+    {
+      "id": "8db6",
+      "name": "Canario",
+      "email": "canariobelo@gmail.com",
+      "password": null
+    },
+    {
+      "id": "68dd",
+      "name": "Abebe",
+      "email": "abebe@gmail.com",
+      "password": null
+    },
+    {
+      "id": "94ec",
+      "name": "LocalStorage",
+      "email": "nicolas.moraes.ns@gmail.com",
+      "password": null
+    },
+    {
+      "id": "a4be",
+      "name": "",
+      "email": "teste@gmail.com",
+      "password": null
+    },
+    {
+      "id": "dd62",
+      "name": "teste",
+      "email": "nicolas.moraes.ns@gmail.com",
+      "password": null
+    },
+    {
+      "id": "a466",
+      "name": "Data",
+      "email": "data@gmail.com",
+      "password": null
+    },
+    {
+      "id": "befa",
+      "name": "Data2",
+      "email": "data2@gmail.com",
+      "password": null
+    },
+    {
+      "id": "1662",
+      "name": "Data03",
+      "email": "nicolas.moraes.ns@gmail.com",
+      "password": null
+    }
+  ]
+}

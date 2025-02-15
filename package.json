@@ -1,0 +1,22 @@
+{
+  "name": "mart",
+  "version": "1.0.0",
+  "description": "A online ambient to the artistic comunity",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch C:/Users/nicty/Downloads/FORM/form/Mart/prod/assets/resources/server/db.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolas Siqueira Moraes",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "jquery-mask-plugin": "^1.14.16",
+    "json-server": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.1",
+    "globals": "^15.15.0"
+  }
+}
